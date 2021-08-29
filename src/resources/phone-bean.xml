@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="fromBeanPhone" class="com.phone.models.Phone">
+        <property name="name"           value="default"/>
+        <property name="weight"         value="100"/>
+        <property name="screenDiagonal" value="5"/>
+        <property name="memory"         value="64"/>
+        <property name="hasCamera"      value="true"/>
+    </bean>
+    <bean id="fromBeanSmartphone" class="com.phone.models.Smartphone">
+        <property name="name"           value="default"/>
+        <property name="weight"         value="100"/>
+        <property name="screenDiagonal" value="5"/>
+        <property name="memory"         value="64"/>
+        <property name="hasCamera"      value="true"/>
+        <property name="cpuFreq"        value="1000000"/>
+        <property name="ramCapacity"    value="3000"/>
+        <property name="coreCount"      value="8"/>
+    </bean>
+
+    <context:component-scan base-package="com.phone.controllers" />
+</beans>
